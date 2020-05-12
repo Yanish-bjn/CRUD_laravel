@@ -28,13 +28,16 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{{ route('welcome') }}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="{{ route('home') }}">Ajouter</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
+              <a class="nav-link" href="#">Modifier</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Supprimer</a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0" action="{{ route('register') }}">
