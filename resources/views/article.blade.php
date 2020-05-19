@@ -98,13 +98,15 @@
 
 <div class="row">
   <div class="col-sm-12">
-    <div class="full-right">
-      <h2>Les artices</h2>
+    <p><div class="full-right">
+
     </div>
   </div>
 </div>
 
-<table class="table table-bordered">
+<p><div class="container" mt-4>
+        <h1>Voici les Taches</h1>
+        <table class='table table-striped'>
   <tr>
       <th>Id<th>
       <th>Nom</th>
@@ -138,6 +140,7 @@
              @endforeach
 
 </table>
+</div>
 
 
 
