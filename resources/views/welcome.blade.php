@@ -28,24 +28,27 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{{ route('welcome') }}">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('home') }}">Ajouter</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Modifier</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Supprimer</a>
             </li>
           </ul>
-          <form class="form-inline mt-2 mt-md-0" action="{{ route('register') }}">
+
+          <form class="nav-link" action="{{ route('register') }}">
             <button class="btn btn-outline-light">Inscription</a>
             </form>
-            <form class="form-inline mt-2 mt-md-0" action="{{ route('login') }}">
+            <form class="nav-item" action="{{ route('login') }}">
             <button class="btn btn-outline-light">Connexion</button>
         </form>
+        @if (session('status'))
+            <div class="alert alert-success" role="alert">
+                {{ session('status') }}
+            </div>
+        @endif
       </nav>
     </header>
 
