@@ -38,13 +38,13 @@
               <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/home">Ajouter</a>
+              <a class="nav-link" href="/article">Article</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ajouter</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Modifier</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Supprimer</a>
             </li>
           </ul>
 
@@ -90,7 +90,7 @@
                   </div>
               </nav>
 
-              
+
           </div>
 
       </nav>
