@@ -20,6 +20,27 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/ajouter', function () {
+    return view('ajouter');
+});
+
+Route::get('/livre', function () {
+    return view('livre');
+});
+
+Route::post('/Livre', function () {
+    $livre = App\livre::create([
+    'Nom' => request('Nom'),
+    'Auteur' => request('Auteur'),
+    'Date' => request('Date'),
+  ]);
+  return view('home');
+});
+
 Route::get('/article', function () {
-    return view('article');
+  $livre = App\livre::all();
+    return view('article', [
+      'livre' => $livre,
+    ]);
 });
