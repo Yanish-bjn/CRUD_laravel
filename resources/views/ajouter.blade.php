@@ -41,7 +41,7 @@
               <a class="nav-link" href="/article">Article</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Ajouter</a>
+              <a class="nav-link" href="/ajouter">Ajouter</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Modifier</a>
@@ -96,73 +96,40 @@
       </nav>
     </header>
 
-<div class="row">
-  <div class="col-sm-12">
-    <p><div class="full-right">
-
-    </div>
-  </div>
-</div>
-
-<p><div class="container" mt-4>
-        <h1>Voici les Livres</h1>
-        <table class='table table-striped'>
-  <tr>
-      <th>id<th>
-      <th>Nom</th>
-      <th>Auteur</th>
-      <th>Date</th>
-      <th>Date de création</th>
-      <th>Date de Mise à jour</th>
-
-      <th with="80px" class="text-center">
-        <a class="btn btn-info" href="/ajouter">
-        <i class="glyphicon glyphicon-plus"></i>
-        <a/>
-      </th>
-  </tr>
+    <main role="main">
 
 
-  @foreach ($livre  as $livre)
-    <tr>
-      <td>{{ $livre->id }}</td>
-      <td></td>
-      <td>{{ $livre->Nom }}</td>
-      <td>{{ $livre->Auteur }}</td>
-      <td>{{ $livre->Date_creation }}</td>
-      <td>{{ $livre->created_at }}</td>
-      <td>{{ $livre->updated_at }}</td>
-      <td>
-          <a class="btn btn-info" href="/ajouter">
-              <i class="glyphicon glyphicon-th-large"></i></a>
-          <a class="btn btn-primary" href="/Modifier">
-              <i class="glyphicon glyphicon-pencil"></i></a>
-          <a class="btn btn-danger" href="/supprimer">
-                  <i class="glyphicon glyphicon-pencil"></i></a>
-            </td>
-          </tr>
-    @endforeach
+    </br><p><form class="container" method="post" action="/Livre">
+        {{ csrf_field() }}
+        <div class="form-group">
+          <label for="Nom">Nom du livre :</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" name="Nom">
+        </div>
 
-</table>
-</div>
+        <div class="form-group">
+          <label for="Auteur">Nom de l'Auteur :</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" name="Auteur">
+        </div>
 
+        <div class="form-group">
+          <label for="Date_creation">Date de création du livre : </label>
+          <input type="date" id="Date" name="Date">
+        </div>
 
+        <div class="col-md-6 register">
+          <input type="submit" value"Enregistrer"/>
+      </form></p></br>
 
+    </main>
 
-<footer class="container">
-  <p class="float-right"><a href="#">Back to top</a></p>
-  <p>&copy; 2020 Site réaliser par Bhujun Yanish. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-</footer>
-</main>
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
-<script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
-<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-<script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/holder.min.js"></script>
-</body>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/holder.min.js"></script>
+  </body>
 </html>
