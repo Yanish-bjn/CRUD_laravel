@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\livre;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,9 +25,12 @@ Route::get('/ajouter', function () {
     return view('ajouter');
 });
 
-Route::get('/livre', function () {
-    return view('livre');
+Route::get('/modifier', function () {
+    return view('modifier');
 });
+
+
+Route::get('/livre.supprimer', 'supprimerController@destroy')->name('supprimer');
 
 Route::post('/Livre', function () {
     $livre = App\livre::create([
@@ -43,4 +46,13 @@ Route::get('/article', function () {
     return view('article', [
       'livre' => $livre,
     ]);
+});
+
+Route::post('/update', function () {
+  auth()->user()->update([
+    'Nom' => request('Nom'),
+    'Auteur' => request('Auteur'),
+    'Date' => request('Date'),
+  ]);
+  return view('home');
 });

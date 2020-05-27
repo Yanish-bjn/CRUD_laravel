@@ -44,7 +44,7 @@
               <a class="nav-link" href="/ajouter">Ajouter</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Modifier</a>
+              <a class="nav-link" href="/modifier">Modifier</a>
             </li>
           </ul>
 
